@@ -3,8 +3,6 @@
 
 This is a simple employee management system built using PHP, MySQL, Vue3, and Docker.
 
-
-
 ### Prerequisites
 
 Ensure you have the following installed on your machine:
@@ -24,9 +22,19 @@ Ensure you have the following installed on your machine:
    cd asknicely-practical-test
    ```
 
-3. Use Docker Compose to build and start the services:
+3. Navigate to the docker directory:
    ```bash
-   cd docker && docker-compose up --build
+   cd docker
+   ```
+
+4. Build the Vue image:
+   ```bash
+   docker-compose build --no-cache
+   ```
+
+5. Start the services:
+   ```bash
+   docker-compose up
    ```
 
    This command will pull the necessary images, build the Docker containers, and start the services. The app should be accessible at `http://localhost:8000` and the Vue frontend at `http://localhost:8080`.

@@ -39,20 +39,6 @@ services:
     networks:
       - asknicely
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    environment:
-      PMA_HOST: db
-      PMA_USER: user
-      PMA_PASSWORD: password
-      PMA_PORT: 3306
-    ports:
-      - "8081:80"
-    depends_on:
-      - db
-    networks:
-      - asknicely
-
 volumes:
     db_data:  
 
